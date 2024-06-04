@@ -28,7 +28,6 @@ export default function Navbar() {
         </div>
           <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-72 font-semibold gap-2">
             <li><Link className="py-3" to={"/allBikes"}>All Bikes</Link></li>
-            <li><Link className="py-3"  to={"/about"}>About Us</Link></li>
             <li><Link className="py-3"  to={"/about"}>Services</Link></li>
             <li><Link className="py-3"  to={"/contact"}>Blogs</Link></li>
             <li><Link className="py-3"  to={"/contact"}>Contact Us</Link></li>
@@ -42,7 +41,6 @@ export default function Navbar() {
         </div>
           <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-72 font-semibold gap-2">
             <li><Link className="py-3" to={"/allBikes"}>All Bikes</Link></li>
-            <li><Link className="py-3"  to={"/about"}>About Us</Link></li>
             <li><Link className="py-3"  to={"/about"}>Services</Link></li>
             <li><Link className="py-3"  to={"/contact"}>Blogs</Link></li>
             <li><Link className="py-3"  to={"/contact"}>Contact Us</Link></li>
@@ -59,7 +57,6 @@ export default function Navbar() {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 gap-2 items-center font-semibold">
               <li><Link to={"/allBikes"}>All Bikes</Link></li>
-              <li><Link to={"/about"}>About Us</Link></li>
               <li><Link className="py-3"  to={"/about"}>Services</Link></li>
               <li><Link className="py-3"  to={"/contact"}>Blogs</Link></li>
               <li><Link to={"/contact"}>Contact Us</Link></li>
@@ -70,7 +67,6 @@ export default function Navbar() {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 gap-2 items-center font-semibold">
               <li><Link to={"/allBikes"}>All Bikes</Link></li>
-              <li><Link to={"/about"}>About Us</Link></li>
               <li><Link className="py-3"  to={"/about"}>Services</Link></li>
               <li><Link className="py-3"  to={"/contact"}>Blogs</Link></li>
               <li><Link to={"/contact"}>Contact Us</Link></li>

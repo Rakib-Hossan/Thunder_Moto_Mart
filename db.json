@@ -1,0 +1,120 @@
+{
+  "bikes": [
+    {
+      "id": "1",
+      "model": "Domane SL 7",
+      "brand": "Yamaha",
+      "image": "https://i.ibb.co/4m6LYJ4/banner-Image.png",
+      "price": "50000"
+    },
+    {
+      "id": "2",
+      "model": "Defy Advanced 1",
+      "brand": "Yamaha",
+      "image": "https://i.ibb.co/4m6LYJ4/banner-Image.png",
+      "price": 3200
+    },
+    {
+      "id": "3",
+      "model": "S-Works Tarmac SL7",
+      "brand": "Honda",
+      "image": "https://i.ibb.co/4m6LYJ4/banner-Image.png",
+      "price": 12000
+    },
+    {
+      "id": "4",
+      "model": "Spectral 29 CF 8",
+      "brand": "Honda",
+      "image": "https://i.ibb.co/4m6LYJ4/banner-Image.png",
+      "price": 4499
+    },
+    {
+      "id": "5",
+      "model": "Fuel EX 9.8",
+      "brand": "Hero",
+      "image": "https://i.ibb.co/4m6LYJ4/banner-Image.png",
+      "price": 6499.99
+    },
+    {
+      "id": "6",
+      "model": "Stumpjumper Expert",
+      "brand": "Hero",
+      "image": "https://i.ibb.co/4m6LYJ4/banner-Image.png",
+      "price": 5000
+    },
+    {
+      "id": "7",
+      "model": "Synapse Carbon 105",
+      "brand": "Bajaj",
+      "image": "https://i.ibb.co/4m6LYJ4/banner-Image.png",
+      "price": 2600
+    },
+    {
+      "id": "8",
+      "model": "SB130 TLR T2",
+      "brand": "Bajaj",
+      "image": "https://i.ibb.co/4m6LYJ4/banner-Image.png",
+      "price": 7500
+    },
+    {
+      "id": "9",
+      "model": "R3 Ultegra",
+      "brand": "TVS",
+      "image": "https://i.ibb.co/4m6LYJ4/banner-Image.png",
+      "price": 4500
+    },
+    {
+      "id": "10",
+      "model": "Mojo 4",
+      "brand": "TVS",
+      "image": "https://i.ibb.co/4m6LYJ4/banner-Image.png",
+      "price": 5899
+    },
+    {
+      "id": "11",
+      "model": "Checkpoint SL 6",
+      "brand": "Lifan",
+      "image": "https://i.ibb.co/4m6LYJ4/banner-Image.png",
+      "price": 3799.99
+    },
+    {
+      "id": "12",
+      "model": "Topstone Carbon Lefty 3",
+      "brand": "Lifan",
+      "image": "https://i.ibb.co/4m6LYJ4/banner-Image.png",
+      "price": 4250
+    }
+  ],
+  "brand": [
+    {
+      "title": "Yamaha",
+      "image": "https://i.ibb.co/f97TB8C/panjabi.jpg",
+      "id": "2314"
+    },
+    {
+      "title": "Honda",
+      "image": "https://i.ibb.co/7jSPcZ8/formal-Shirt.jpg",
+      "id": "8569"
+    },
+    {
+      "title": "Hero",
+      "image": "https://i.ibb.co/QDbZ0fk/t-shirt.jpg",
+      "id": "5680"
+    },
+    {
+      "title": "Bajaj",
+      "image": "https://i.ibb.co/Yff8W97/formal-Shoe.jpg",
+      "id": "e23f"
+    },
+    {
+      "title": "TVS",
+      "image": "https://i.ibb.co/YTVtTpQ/sprot-Shoe.jpg",
+      "id": "970b"
+    },
+    {
+      "title": "Lifan",
+      "image": "https://i.ibb.co/9n87FrF/sandal.jpg",
+      "id": "b069"
+    }
+  ]
+}

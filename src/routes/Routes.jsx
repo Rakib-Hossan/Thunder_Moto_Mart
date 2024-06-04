@@ -1,7 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/Home";
-import About from "../pages/About";
 import Contact from "../pages/Contact";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
@@ -10,6 +9,9 @@ import PrivateRoutes from "./PrivateRoutes";
 import DashboardHome from "../dashboard/DashboardHome";
 import ManageProducts from "../dashboard/ManageProducts";
 import AddProducts from "../dashboard/AddProducts";
+import AllBikes from "../pages/AllBikes";
+import ProductInfo from "../components/products/ProductInfo";
+import EditProduct from "../dashboard/EditProduct";
 
 const router = createBrowserRouter([
     {
@@ -21,8 +23,9 @@ const router = createBrowserRouter([
                 element:<Home/>
             },
             {
-                path:"about",
-                element:<About/>
+                path:'/allBikes/:id',
+                element: <ProductInfo/>,
+                loader: ({params})=>fetch(`http://localhost:3000/bikes/${params?.id}`)
             },
             {
                 path:"contact",
@@ -35,6 +38,10 @@ const router = createBrowserRouter([
             {
                 path:'register',
                 element:<Register/>
+            },
+            {
+                path:'allBikes',
+                element:<AllBikes/>
             }
         ]
     },
@@ -57,9 +64,14 @@ const router = createBrowserRouter([
         {
             path:'add-products',
             element: <AddProducts />
+        },
+        {
+            path:'manage-products/edit-products/:id',
+            element: <EditProduct/>,
+            loader: ({params}) => fetch(`http://localhost:3000/bikes/${params?.id}`)
         }
-       ]
 
+       ]
     }
 ])
 
