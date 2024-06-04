@@ -6,8 +6,8 @@ export default function FacebookLogin() {
 
     const handleFacebookLogin = () => {
         signInWithFacebook();
-
     }
+    
   return (
     <div>
         <button onClick={handleFacebookLogin} className='btn font-semibold'><img src="https://i.ibb.co/nbzQYxY/fb.png" alt="" className='w-[40px]' />Facebook</button>
