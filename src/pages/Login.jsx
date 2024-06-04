@@ -35,11 +35,11 @@ useEffect(()=>{
 
   return (
     <div className="container mx-auto">
-        <h1 className=" text-3xl md:text-4xl font-bold text-center py-4 text-green-600">Login now!</h1>
+        <h1 className=" text-2xl md:text-3xl font-bold text-center py-4 text-green-600">Login now!</h1>
         <div className="hero">
             <div className="hero-content flex-col gap-8 md:gap-24 lg:flex-row-reverse justify-between items-center">
                 <div className="text-center lg:text-left basis-1/2">
-                    <img src="https://i.ibb.co/VV6Kgv3/img2.jpg" />
+                    <img src="https://i.ibb.co/KsxHvvt/6325230.jpg" />
                 </div>
 
                 <div className="card shrink-0 w-full max-w-md shadow-2xl bg-base-100 basis-1/2">
@@ -60,13 +60,13 @@ useEffect(()=>{
                             </label>
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-primary">Login</button>
+                            <button className="btn  btn-success font-bold text-white">Login</button>
                         </div>
                     
                 </form>
                     <div className="mx-3">
                         <h3 className="my-4 text-center font-bold">Login with</h3>
-                        <div className="flex gap-4 justify-between ">
+                        <div className="flex gap-4 justify-around ">
                         <GoogleLogin />
                         <FacebookLogin/>
                         </div>

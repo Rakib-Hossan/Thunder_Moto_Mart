@@ -10,7 +10,7 @@ export default function FacebookLogin() {
     
   return (
     <div>
-        <button onClick={handleFacebookLogin} className='btn font-semibold'><img src="https://i.ibb.co/nbzQYxY/fb.png" alt="" className='w-[40px]' />Facebook</button>
+        <button onClick={handleFacebookLogin} className='btn font-semibold'><img src="https://i.ibb.co/HVHbrdF/fb.png" alt="" className='w-[36px]' />Facebook</button>
     </div>
   )
 }

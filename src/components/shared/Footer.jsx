@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="footer p-10 justify-between">
             <aside>
                 <img src="https://i.ibb.co/FmPbC6q/green-energy-9330-1.png" alt="" />
-                <p>Thunder Moto Mart.<br/>Providing reliable tech since 2024</p>
+                <p>Thunder Moto Mart.<br/>Providing reliable deals since 2024</p>
             </aside> 
             <nav>
                 <h6 className="footer-title">Company</h6> 

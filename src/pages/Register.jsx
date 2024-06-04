@@ -48,11 +48,11 @@ useEffect(()=>{
 
   return (
     <div>
-        <h1 className=" text-3xl md:text-4xl font-bold text-center py-4 text-green-600">Register now!</h1>
-            <div className="hero min-h-screen bg-base-200">
+        <h1 className=" text-2xl md:text-3xl font-bold text-center py-4 text-green-600">Register now!</h1>
+            <div className="hero min-h-screen">
                 <div className="hero-content flex-col gap-8 md:gap-24 lg:flex-row-reverse justify-between items-center">
                 <div className="text-center lg:text-left flex-1">
-                    <img src="https://i.ibb.co/x1b6c4x/img3.jpg" />
+                    <img src="https://i.ibb.co/rFTvWB2/4934425.jpg" />
                 </div>
                     <div className="card shrink-0 w-full max-w-md shadow-2xl bg-base-100">
                     <form onSubmit={handleSubmit} className="card-body">
@@ -91,7 +91,7 @@ useEffect(()=>{
                             </div>
                                 )}
                         <div className="form-control mt-6">
-                            <button className="btn btn-primary">Register</button>
+                            <button className="btn btn-success font-bold text-white">Register</button>
                             {message && <p>{message}</p>}
                         </div>
 
@@ -103,7 +103,7 @@ useEffect(()=>{
                     </form>
                     <div className="mx-3">
                         <h3 className="my-4 text-center font-bold">Register with</h3>
-                        <div className="flex gap-4 ">
+                        <div className="flex gap-4 justify-around ">
                         <GoogleLogin />
                         <FacebookLogin/>
                         </div>
