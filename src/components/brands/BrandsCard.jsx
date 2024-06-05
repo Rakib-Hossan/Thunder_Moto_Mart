@@ -4,7 +4,7 @@ export default function BrandsCard({brand}) {
     <div className='container mx-auto'>
         <div className="flex flex-col items-center m-5 ">
                 <div>
-                  <img src={brand?.image} alt={brand?.title} />
+                  <img className="w-[50px] md:w-[100px]" src={brand?.image} alt={brand?.title} />
                 </div>
         </div>
     </div>

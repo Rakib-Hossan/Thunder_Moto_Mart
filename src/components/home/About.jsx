@@ -5,7 +5,7 @@ export default function About() {
         <div className="hero">
             <div className="flex flex-col gap-10 items-center justify-between lg:flex-row p-4">
                    <div className="basis-1/2" >
-                        <img src="https://i.ibb.co/JtNtmmg/fs-transformed.jpg"/>
+                        <img className="rounded-xl" src="https://i.ibb.co/JtNtmmg/fs-transformed.jpg"/>
                    </div>
 
                    <div className="basis-1/2 md:px-10 ">
