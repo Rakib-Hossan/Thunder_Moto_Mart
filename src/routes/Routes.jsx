@@ -12,6 +12,9 @@ import AddProducts from "../dashboard/AddProducts";
 import AllBikes from "../pages/AllBikes";
 import ProductInfo from "../components/products/ProductInfo";
 import EditProduct from "../dashboard/EditProduct";
+import AddBrands from "../dashboard/AddBrands";
+import ManageBrand from "../dashboard/ManageBrand";
+import EditBrand from "../dashboard/EditBrand";
 
 const router = createBrowserRouter([
     {
@@ -69,7 +72,21 @@ const router = createBrowserRouter([
             path:'manage-products/edit-products/:id',
             element: <EditProduct/>,
             loader: ({params}) => fetch(`http://localhost:3000/bikes/${params?.id}`)
-        }
+        },
+        {
+            path:'manage-brands',
+            element: <ManageBrand />
+        },
+        {
+            path:'add-brands',
+            element: <AddBrands />
+        },
+        {
+            path:'manage-brands/edit-brand/:id',
+            element: <EditBrand/>,
+            loader: ({params}) => fetch(`http://localhost:3000/brand/${params?.id}`)
+        },
+        
 
        ]
     }

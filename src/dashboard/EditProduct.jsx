@@ -46,7 +46,6 @@ export default function EditProduct() {
               form.reset();
             });
             navigate('/dashboard/manage-products');
-        
         }
 
   return (

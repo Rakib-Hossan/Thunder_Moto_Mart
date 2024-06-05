@@ -12,7 +12,7 @@ export default function Brands() {
     },[])
   return (
     <div className="container mx-auto">
-       <div className="grid  grid-cols-2 md:grid-cols-3 gap-5 px-6 justify-around items-center">
+       <div className="grid  grid-cols-2 md:grid-cols-3">
         {
             brands?.map(brand=><BrandsCard key={brands?.id} brand={brand}/>)
         }

@@ -12,7 +12,7 @@ export default function ManageProducts() {
     },[]);
 
     const handleDeleteProduct = (id) => {
-      setProducts(products.filter((product)=>product.id!==id));
+      setProducts(products.filter((product)=>product?.id!==id));
   };
 
   return (

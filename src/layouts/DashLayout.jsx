@@ -29,6 +29,8 @@ export default function DashLayout() {
                       <li><Link to={"/dashboard"}>Dashboard</Link></li>
                       <li><Link to={"/dashboard/manage-products"}>Manage Products</Link></li>
                       <li><Link to={"/dashboard/add-products"}>Add Product</Link></li>
+                      <li><Link to={"/dashboard/manage-brands"}>Manage Brands</Link></li>
+                      <li><Link to={"/dashboard/add-brands"}>Add Brands</Link></li>
                     </div>
                     <div>
                       <li><Link to={"/"} className='mb-3'>Back to Home</Link></li>
