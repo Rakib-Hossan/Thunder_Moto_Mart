@@ -6,7 +6,7 @@ export default function Brands() {
     const [brands, setBrands]=useState();
 
     useEffect(()=>{
-        fetch('http://localhost:3000/brand')
+        fetch('http://localhost:5000/brand')
         .then((res)=>res.json())
         .then((data)=> setBrands(data))
     },[])
@@ -14,7 +14,7 @@ export default function Brands() {
     <div className="container mx-auto">
        <div className="grid  grid-cols-2 md:grid-cols-3">
         {
-            brands?.map(brand=><BrandsCard key={brands?.id} brand={brand}/>)
+            brands?.map(brand=><BrandsCard key={brand?._id} brand={brand}/>)
         }
         </div> 
     </div>

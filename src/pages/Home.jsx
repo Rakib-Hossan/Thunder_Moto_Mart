@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div>
         <Banner/>
-        <h2 className="text-2xl font-bold text-center py-5">Explore Our <span className="text-green-600">Top Bikes</span> Brands</h2>
+        <h2 className="text-2xl font-bold text-center py-5"> Our <span className="text-green-600">Top Selling Bikes</span> Brands</h2>
         <Brands/>
         <h2 className="text-2xl font-bold text-center py-5">Our <span className="text-green-600">New arrival!!</span> Bikes</h2>
         <AllProducts/>

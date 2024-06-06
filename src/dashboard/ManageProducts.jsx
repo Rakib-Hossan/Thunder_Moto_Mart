@@ -6,13 +6,13 @@ export default function ManageProducts() {
   const[products, setProducts] = useState();
 
     useEffect(()=>{
-        fetch('http://localhost:3000/bikes')
+        fetch('http://localhost:5000/bikes')
         .then((res)=> res.json())
         .then((data) => setProducts(data));
     },[]);
 
-    const handleDeleteProduct = (id) => {
-      setProducts(products.filter((product)=>product?.id!==id));
+    const handleDeleteProduct = (_id) => {
+      setProducts(products.filter((product)=>product?._id!==_id));
   };
 
   return (
@@ -29,7 +29,7 @@ export default function ManageProducts() {
     </thead>
     <tbody>
       {
-        products?.map((product)=>(<ProductTable key={product?.id} product={product} onDelete={handleDeleteProduct}/>))
+        products?.map((product)=>(<ProductTable key={product?._id} product={product} onDelete={handleDeleteProduct}/>))
       }
     </tbody>
       </table>

@@ -22,6 +22,8 @@ const handleSubmit = (e) => {
     const email = form.email.value;
     const password = form.password.value; 
     const confirmPassword = form.confirm_password.value;
+    const name = form.name.value;
+    const phone = form.name.value;
 
 
     if(password !== confirmPassword){
@@ -35,7 +37,8 @@ const handleSubmit = (e) => {
                 <span>Successfully registered!</span>
             </div>
         );
-        createUserWithEmailAndPassword(email,password,confirmPassword);
+        createUserWithEmailAndPassword(email,password,confirmPassword,name,phone);
+        console.log(createUserWithEmailAndPassword);
     }
 }
 
@@ -66,7 +69,7 @@ useEffect(()=>{
                             <label className="label">
                                 <span className="label-text">Phone Number</span>
                             </label>
-                            <input type="text" name="phoneNumber" placeholder="Phone Number" className="input input-bordered" required />
+                            <input type="tel" name="phoneNumber" placeholder="Phone Number" className="input input-bordered" required />
                         </div>
                     <div className="form-control">
                             <label className="label">

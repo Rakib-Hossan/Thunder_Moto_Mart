@@ -5,7 +5,7 @@ export default function DashboardHome() {
   const [products,setProducts] = useState();
 
     useEffect(()=>{
-        fetch('http://localhost:3000/bikes')
+        fetch('http://localhost:5000/bikes')
         .then((res)=>res.json())
         .then((data)=>setProducts(data));
     },[]);
@@ -13,7 +13,7 @@ export default function DashboardHome() {
     <div>
       <h2>Total Bikes</h2>
         {
-          products?.map(product=><TotalProduc key ={product?.id} product={product}/>)
+          products?.map(product=><TotalProduc key ={product?._id} product={product}/>)
         }
     </div>
   )

@@ -18,7 +18,7 @@ export default function Navbar() {
   }
 
   return (
-    <div className="navbar bg-base-100 justify-between">
+    <div className="navbar bg-base-100 justify-between sticky top-0 z-10">
     <div className="navbar-start">
       {
         user?.email?(
@@ -29,7 +29,7 @@ export default function Navbar() {
           <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-72 font-semibold gap-2">
             <li><Link className="py-3" to={"/allBikes"}>All Bikes</Link></li>
             <li><Link className="py-3"  to={"/about"}>Services</Link></li>
-            <li><Link className="py-3"  to={"/contact"}>Blogs</Link></li>
+            <li><Link className="py-3"  to={"/contact"}>Orders</Link></li>
             <li><Link className="py-3"  to={"/contact"}>Contact Us</Link></li>
             <li><Link className="py-3"  to={"/dashboard"}>Dashboard</Link></li>
           </ul>
@@ -42,7 +42,7 @@ export default function Navbar() {
           <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-72 font-semibold gap-2">
             <li><Link className="py-3" to={"/allBikes"}>All Bikes</Link></li>
             <li><Link className="py-3"  to={"/about"}>Services</Link></li>
-            <li><Link className="py-3"  to={"/contact"}>Blogs</Link></li>
+            <li><Link className="py-3"  to={"/contact"}>Orders</Link></li>
             <li><Link className="py-3"  to={"/contact"}>Contact Us</Link></li>
           </ul>
       </div>
@@ -58,7 +58,7 @@ export default function Navbar() {
           <ul className="menu menu-horizontal px-1 gap-2 items-center font-semibold">
               <li><Link to={"/allBikes"}>All Bikes</Link></li>
               <li><Link className="py-3"  to={"/about"}>Services</Link></li>
-              <li><Link className="py-3"  to={"/contact"}>Blogs</Link></li>
+              <li><Link className="py-3"  to={"/contact"}>Orders</Link></li>
               <li><Link to={"/contact"}>Contact Us</Link></li>
               <li><Link className="py-3"  to={"/dashboard"}>Dashboard</Link></li>
           </ul>
@@ -68,7 +68,7 @@ export default function Navbar() {
           <ul className="menu menu-horizontal px-1 gap-2 items-center font-semibold">
               <li><Link to={"/allBikes"}>All Bikes</Link></li>
               <li><Link className="py-3"  to={"/about"}>Services</Link></li>
-              <li><Link className="py-3"  to={"/contact"}>Blogs</Link></li>
+              <li><Link className="py-3"  to={"/contact"}>Orders</Link></li>
               <li><Link to={"/contact"}>Contact Us</Link></li>
           </ul>
     </div>
@@ -82,7 +82,7 @@ export default function Navbar() {
             ):(
                 <div className="navbar-end gap-4">
                 
-                <Link to={'/dashboard'}>
+                <Link to={'/profile'}>
                 <div className="avatar">
                     <div className="w-5 md:w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                     <img src={user?.photoURL || "/public/placeholder.jpg"} />

@@ -9,6 +9,7 @@ export default function Login() {
 
 const navigate = useNavigate();
 const [userInfo] = useAuthState(auth);
+console.log(userInfo);
 const [
     signInWithEmailAndPassword,
     user,

@@ -4,17 +4,17 @@ import SingleProducts from "../components/products/SingleProducts";
 export default function AllBikes() {
 
     const [products,setProducts] = useState();
-    const[search, setSearch] = useState('');
-    console.log(search); 
+    
+    const[search, setSearch] = useState(''); 
 
     useEffect(()=>{
-        fetch('http://localhost:3000/bikes')
+        fetch('http://localhost:5000/bikes')
         .then((res)=>res.json())
         .then((data)=>setProducts(data));
     },[]);
 
-    const handleDeleteProduct = (id) => {
-      setProducts(products.filter((product)=>product?.id!==id));
+    const handleDeleteProduct = (_id) => {
+      setProducts(products.filter((product)=>product?._id!==_id));
     };
   return (
     <div className="container mx-auto">
@@ -25,13 +25,13 @@ export default function AllBikes() {
         </div>
         </form>
 
-        <div className="grid md:grid-cols-3 gap-10 px-6 justify-center items-center py-8">
+        <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-10 px-6 justify-center items-center py-8">
             {
               products?.filter((product=>{
                 return search.toLowerCase() === ''
                 ? product
                 : product.model.toLowerCase().includes(search);
-              }))?.map(product=><SingleProducts key={product?.id} product={product} onDelete={handleDeleteProduct}/>)
+              }))?.map(product=><SingleProducts key={product?._id} product={product} onDelete={handleDeleteProduct}/>)
             }
         </div>
     </div>

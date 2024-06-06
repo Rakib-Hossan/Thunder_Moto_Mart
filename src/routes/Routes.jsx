@@ -15,6 +15,8 @@ import EditProduct from "../dashboard/EditProduct";
 import AddBrands from "../dashboard/AddBrands";
 import ManageBrand from "../dashboard/ManageBrand";
 import EditBrand from "../dashboard/EditBrand";
+import Profile from "../pages/Profile";
+import EditProfile from "../pages/EditProfile";
 
 const router = createBrowserRouter([
     {
@@ -28,7 +30,7 @@ const router = createBrowserRouter([
             {
                 path:'/allBikes/:id',
                 element: <ProductInfo/>,
-                loader: ({params})=>fetch(`http://localhost:3000/bikes/${params?.id}`)
+                loader: ({params})=>fetch(`http://localhost:5000/bikes/${params?.id}`)
             },
             {
                 path:"contact",
@@ -45,14 +47,30 @@ const router = createBrowserRouter([
             {
                 path:'allBikes',
                 element:<AllBikes/>
-            }
+            },
+            {
+                path:'profile',
+                element:<PrivateRoutes>
+                            <Profile/>
+                     </PrivateRoutes>
+
+            },
+            {
+                path:'edit-profile',
+                element:<PrivateRoutes>
+                            <EditProfile/>
+                     </PrivateRoutes>
+
+            },
+            
+        
         ]
     },
     {
         path:'/dashboard',
         element:(
             <PrivateRoutes>
-                     <DashLayout/>
+                <DashLayout/>
             </PrivateRoutes>
        ),
        children: [
@@ -71,7 +89,7 @@ const router = createBrowserRouter([
         {
             path:'manage-products/edit-products/:id',
             element: <EditProduct/>,
-            loader: ({params}) => fetch(`http://localhost:3000/bikes/${params?.id}`)
+            loader: ({params}) => fetch(`http://localhost:5000/bikes/${params?.id}`)
         },
         {
             path:'manage-brands',
@@ -84,9 +102,8 @@ const router = createBrowserRouter([
         {
             path:'manage-brands/edit-brand/:id',
             element: <EditBrand/>,
-            loader: ({params}) => fetch(`http://localhost:3000/brand/${params?.id}`)
-        },
-        
+            loader: ({params}) => fetch(`http://localhost:5000/brand/${params?.id}`)
+        }
 
        ]
     }

@@ -5,13 +5,14 @@ export default function ManageBrand() {
 
     const [brands, setBrands] = useState();
     useEffect(()=>{
-        fetch('http://localhost:3000/brand')
+        fetch('http://localhost:5000/brand')
         .then((res)=>res.json())
         .then((data)=>setBrands(data));
+        // console.log(data);
     },[]);
 
-    const handleDeleteBrand = (id) => {
-        setBrands(brands.filter((brand)=>brand?.id!==id));
+    const handleDeleteBrand = (_id) => {
+        setBrands(brands.filter((brand)=>brand?._id!==_id));
     };
 
   return (
@@ -20,14 +21,13 @@ export default function ManageBrand() {
     <thead className="text-xl">
     <tr>
         <th>Brand </th>
-        <th>ID</th>
         <th>Title</th>
         <th>Action</th>
       </tr>
     </thead>
     <tbody>
         {
-            brands?.map((brand)=>(<BrandTable key={brand?.id} brand={brand} onDelete={handleDeleteBrand}/>))
+            brands?.map((brand)=>(<BrandTable key={brand?._id} brand={brand} onDelete={handleDeleteBrand}/>))
         }
     </tbody>
     </table>

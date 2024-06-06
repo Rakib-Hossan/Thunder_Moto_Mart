@@ -1,3 +1,4 @@
+import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
 export default function AddBrands() {
@@ -8,13 +9,12 @@ const handleAddBrand = async (e) => {
     e.preventDefault();
 
     const form = e.target;
-    const id = form.id.value;
     const title = form.title.value;
     const image = form.image.value;
 
-    const brandData = {id,title,image}
+    const brandData = {title,image}
     
-    await fetch('http://localhost:3000/brand',{
+    await fetch('http://localhost:5000/brand',{
         method: "POST",
         headers:{
             "Content-type": "application/json",
@@ -22,8 +22,8 @@ const handleAddBrand = async (e) => {
         body: JSON.stringify(brandData),
     })
     .then((res)=>res.json())
-    .then((brandData)=>{
-        console.log(brandData)
+    .then(()=>{
+        toast.success('Brand successfully added');
         form.reset();
     })
     navigate('/dashboard/manage-brands');
@@ -33,10 +33,6 @@ const handleAddBrand = async (e) => {
     <div className='w-full'>
       <h3 className="text-2xl font-bold mb-4 text-center text-green-500  mt-4">Add Product</h3>
       <form onSubmit={handleAddBrand} className="w-full px-20">
-        <div className="mb-4">
-          <label htmlFor="" className="font-semibold">ID</label>
-          <input type="number" name="id" className="w-full py-3 px-4 border-2 border-gray-500"/>
-        </div>
 
         <div className="mb-4">
           <label htmlFor=""className="font-semibold">TITLE</label>
